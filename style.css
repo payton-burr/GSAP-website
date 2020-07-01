@@ -161,6 +161,7 @@ nav-links h3 {
   border: 2px solid #ffffff;
   border-radius: 50%;
   position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 .scrollmagic-pin-spacer {

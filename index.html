@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Travel Website</title>
 </head>
-<body>
+<body data-barba="wrapper">
   
   <header class="nav-header">
     <h1><a href="index.html" id="logo">days.</a></h1>
@@ -17,7 +17,7 @@
     </div>
   </header>
 
-  <main>
+  <main data-barba="container" data-barba-namespace="home">
     <section class="mountain slide">
       <div class="hero-img">
         <img src="images/forest.png" alt="forest image">
@@ -83,9 +83,9 @@
     <span class="cursor-text"></span>
   </div>
 
-  <div class="swip swip1"></div>
-  <div class="swip swip2"></div>
-  <div class="swip swip3"></div>
+  <div class="swipe swipe1"></div>
+  <div class="swipe swipe2"></div>
+  <div class="swipe swipe3"></div>
 
   <script src="https://unpkg.com/@barba/core"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c=" crossorigin="anonymous"></script>

@@ -98,8 +98,46 @@ function navToggle(e) {
   }
 }
 
+// Barba
+
+barba.init({
+  views: [
+    {
+      namespace: 'home',
+      beforeEnter() {
+        animateSlides();
+      },
+      beforeLeave() {
+        slideScene.destroy();
+        pageScene.destroy();
+        controller.destroy();
+      },
+    },
+    {
+      namespace: 'fashion',
+    },
+  ],
+  transitions: [
+    {
+      leave({ current, next }) {
+        let done = this.async();
+
+        const tl = gsap.timeline({ defaults: { ease: 'power2.inOut' } });
+        tl.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0, onComplete: done });
+      },
+      enter({ current, next }) {
+        let done = this.async();
+        // Scroll to top
+
+        window.scrollTo(0, 0);
+
+        const tl = gsap.timeline({ defaults: { ease: 'power2.inOut' } });
+        tl.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1, onComplete: done });
+      },
+    },
+  ],
+});
+
 burger.addEventListener('click', navToggle);
 window.addEventListener('mousemove', cursor);
 window.addEventListener('mouseover', activeCursor);
-
-animateSlides();

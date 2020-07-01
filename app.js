@@ -29,7 +29,6 @@ function animateSlides() {
       reverse: false,
     })
       .setTween(slideTl)
-      .addIndicators({ colorStart: 'white', colorTrigger: 'white', name: 'slide' })
       .addTo(controller);
 
     // New animation
@@ -47,9 +46,16 @@ function animateSlides() {
     })
       .setPin(slide, { pushFollowers: false })
       .setTween(pageTl)
-      .addIndicators({ colorStart: 'white', colorTrigger: 'white', name: 'page', indent: 200 })
       .addTo(controller);
   });
 }
+
+function cursor(e) {
+  let mouse = document.querySelector('.cursor');
+  mouse.style.top = e.pageY + 'px';
+  mouse.style.left = e.pageX + 'px';
+}
+
+window.addEventListener('mousemove', cursor);
 
 animateSlides();

@@ -149,10 +149,10 @@ nav-links h3 {
 .reveal-img, .reveal-text {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 150%;
   background: #17181a;
   left: 0;
-  top: 0;
+  top: -15%;
 }
 
 .cursor {
@@ -161,4 +161,8 @@ nav-links h3 {
   border: 2px solid #ffffff;
   border-radius: 50%;
   position: absolute;
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
 }

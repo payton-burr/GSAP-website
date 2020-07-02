@@ -8,6 +8,11 @@ body {
   font-family: 'Rubik', sans-serif;
   background-color: #17181a;
   overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  position: absolute;
 }
 
 #logo {

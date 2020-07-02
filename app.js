@@ -23,7 +23,6 @@ function animateSlides() {
     slideTl.fromTo(revealImage, { x: '0%' }, { x: '100%' });
     slideTl.fromTo(img, { scale: 2 }, { scale: 1 }, '-=1');
     slideTl.fromTo(revealText, { x: '0%' }, { x: '100%' }, '-=0.75');
-    slideTl.fromTo(nav, { y: '-100%' }, { y: '0%' }, '-=0.5');
 
     // Scene
 
@@ -148,6 +147,7 @@ barba.init({
         const tl = gsap.timeline({ defaults: { ease: 'power2.inOut' } });
         tl.fromTo('.swipe', 0.75, { x: '0%' }, { x: '100%', stagger: 0.25, onComplete: done });
         tl.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1 });
+        tl.fromTo('.nav-header', 1, { y: '-100%' }, { y: '0%', ease: 'power2.inOut' }, '-=1.5');
       },
     },
   ],
